@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Matrix Calculator</title>
+	</head>
+	<link rel="stylesheet" href="matrix.css" />
+	<body>
+		<div class="matrixContainer">
+			<h1><span>M.TnD</span> Advanced Matrix Calculator </h1>
+			<div class="topdiv">
+				<div class="msize">
+					<label for="matrixSize" id="opp">Select Matrix Size:</label>
+					<select id="matrixSize" onchange="generateMatrices()" >
+						<option value="2">2x2</option>
+						<option value="3">3x3</option>
+					</select>
+				</div>
+
+				<div class="matopp">
+					<label for="operation" id="opp">Select Operation:</label>
+					<select id="operation" onchange="handleOperation()">
+						<option value="addition">Addition</option>
+						<option value="subtraction">Subtraction</option>
+						<option value="multiplication">Multiplication</option>
+						<option value="division">Division</option>
+						<option value="transpose">Transpose</option>
+						<option value="determinant">Determinant</option>
+						<option value="inverse">Inverse</option>
+						<option value="eigen">Eigenvalues</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="matAB">
+				<div class="matA">
+					<h2>Matrix A</h2>
+					<div id="matrixA"></div>
+				</div>
+				<div class="matB">
+					<h2 class="h2matB">Matrix B</h2>
+					<div id="matrixB"></div>
+				</div>
+			</div>
+			<div id="eigenvalues" style="display: none;"></div>
+			<!-- <div id="eigenvectors"></div> -->
+			<button onclick="compute()" id="btn-compute">Compute</button>
+			<div id="result"></div>
+		</div>
+	 	<script src=" https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+		<script src="matrix.js"></script>
+
+
+	</body>
+</html>
